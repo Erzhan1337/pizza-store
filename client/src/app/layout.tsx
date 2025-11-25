@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
-import {ReactNode} from "react";
-
+import { ReactNode } from "react";
+import './global.css'
 
 const nunito = Nunito({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -20,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunito.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${nunito.className} antialiased`}>{children}</body>
     </html>
   );
 }

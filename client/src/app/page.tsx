@@ -1,3 +1,7 @@
+import Header from "@/widgets/Header/ui/Header";
+
 export default function Home() {
-  return <div>Next Js</div>;
+  return <div>
+    <Header />
+  </div>;
 }
