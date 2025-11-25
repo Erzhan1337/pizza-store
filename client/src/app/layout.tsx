@@ -4,8 +4,8 @@ import {ReactNode} from "react";
 
 
 const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["cyrillic"],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="en">
       <body
         className={`${nunito.variable} antialiased`}
       >
