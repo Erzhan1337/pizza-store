@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function SearchResults({ items, onSelected }: ResultProps) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-4 hover:bg-primary/5 transition-all duration-300">
       {items.map((item) => (
         <Link
           href="/"
@@ -19,7 +19,7 @@ function SearchResults({ items, onSelected }: ResultProps) {
             height={35}
           />
           <span>{item.name}</span>
-          <span>{item.price}</span>
+          <span className="ml-10 text-gray-500">{item.price} ₸</span>
         </Link>
       ))}
     </div>
