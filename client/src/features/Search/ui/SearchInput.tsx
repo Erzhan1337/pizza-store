@@ -1,7 +1,7 @@
 "use client";
 import { Search, X } from "lucide-react";
 import { useSearch } from "@/features/Search/model/use-search";
-import { cn } from "@/shared/lib/cn";
+import { cn } from "@/shared/lib/utils/cn";
 import SearchResults from "@/features/Search/ui/SearchResults";
 import { useState } from "react";
 
@@ -27,7 +27,7 @@ function SearchInput() {
     <>
       {(isFocused || isMobileSearchOpen) && (
         <div
-          className="fixed inset-0 z-10 backdrop-blur-xs transition-all duration-300"
+          className="fixed inset-0 z-20 backdrop-blur-xs transition-all duration-300"
           onClick={handleMobileClose}
         />
       )}
@@ -35,13 +35,13 @@ function SearchInput() {
       {/* Mobile */}
       <button
         onClick={() => setIsMobileSearchOpen(true)}
-        className="md:hidden p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+        className="md:hidden p-2 rounded-full border border-primary"
       >
-        <Search className="w-5 h-5" />
+        <Search className="w-5 h-5 text-primary" />
       </button>
 
       {isMobileSearchOpen && (
-        <div className="md:hidden fixed inset-x-0 top-0 z-40 bg-white p-4 shadow-lg animate-in slide-in-from-top duration-300">
+        <div className="md:hidden fixed inset-x-0 top-0 z-30 bg-white p-4 shadow-lg animate-in slide-in-from-top duration-300">
           <div className="flex items-center gap-2">
             <div className="flex-1 relative">
               <div className="flex items-center gap-3 bg-gray-100 rounded-2xl px-4 py-3">
@@ -78,7 +78,7 @@ function SearchInput() {
       <div
         ref={ref}
         className={cn(
-          "hidden md:flex p-1 rounded-full items-center gap-3 md:rounded-xl lg:rounded-2xl md:py-1 md:px-2 lg:py-2 lg:px-3 xl:px-4 xl:py-3 bg-gray-100 relative z-20 transition-all duration-500",
+          "hidden md:flex p-1 rounded-full items-center gap-3 md:rounded-xl lg:rounded-2xl md:py-1 md:px-2 lg:py-2 lg:px-3 xl:px-4 xl:py-3 bg-gray-100 relative z-30 transition-all duration-500",
           isFocused && "bg-white shadow-lg ring-2 ring-primary",
         )}
       >

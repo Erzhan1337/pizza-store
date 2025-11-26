@@ -1,7 +1,9 @@
-import Header from "@/widgets/Header/ui/Header";
+import HomePage from "@/pages/Home/ui/HomePage";
 
 export default function Home() {
-  return <div>
-    <Header />
-  </div>;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 }
