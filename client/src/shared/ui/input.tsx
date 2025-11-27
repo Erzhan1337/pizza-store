@@ -1,8 +1,6 @@
 function Input() {
   return (
-    <input type="text" >
-
-    </input>
+    <div></div>
   );
 }
 

@@ -3,7 +3,7 @@ import SearchInput from "@/features/Search/ui/SearchInput";
 import Link from "next/link";
 import AuthButton from "@/features/auth/ui/AuthButton";
 import CartButton from "@/features/Cart/ui/CartButton";
-import { Container } from "@/shared/ui/Container";
+import { Container } from "@/shared/ui/container";
 
 function Header() {
   return (
